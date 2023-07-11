@@ -1,66 +1,63 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Data diri
+<b>Nama  :</b>Riswan Nopiyar<br>
+<b>NPM   :</b>2010010085<br>
+<b>Kampus:</b> UNISKA Banjarmasin<br>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## CARA INSTALL
 
-## About Laravel
+**1) Jika belum ada composer maka install composer terlebih dahulu https://getcomposer.org/**
+<br>
+<br>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**2) Clone project dari github**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+```bash
+git clone https://github.com/Riswan-Nopiyar/tugas-masuk-web-dev.git
+```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**3) Install composer di terminal pada project laravel dengan mengetik _'composer install --ignore-platform-reqs'_**
 
-## Learning Laravel
+```bash
+ composer install --ignore-platform-reqs
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**4) Copy _.env.example_ kemudian ubah namanya menjadi _.env_ atau dengan cara terminal seperti dibawah**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+cp .env.example .env
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**5) Kemudian ketik _'php artisan key:generate'_ untuk membuat APP_KEY**
 
-## Laravel Sponsors
+```bash
+ php artisan key:generate
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+**6) Ketik _'php artisan migrate'_ untuk melakukan pembuatan table table database yang dibutuhkan**
 
-### Premium Partners
+```bash
+ php artisan migrate
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+## CARA MENJALANKAN
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**1) _'php artisan serve'_ untuk menjalankan server localhost**
 
-## Code of Conduct
+```bash
+ php artisan serve
+```
+**2) Masukkan URL http://127.0.0.1:8000/ di browser**
+<br>
+<br>
+**3) Internet wajib menyala**
+<br>
+<br>
+## Screenshot
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![Screenshot (259)](https://github.com/Riswan-Nopiyar/tugas-masuk-web-dev/assets/103617674/15d6adc9-c2cb-4fb7-a5c6-24c45d70e809)
+![Screenshot (260)](https://github.com/Riswan-Nopiyar/tugas-masuk-web-dev/assets/103617674/b8dfd2c9-850b-4bbd-8c6d-689e0a045d09)
+![Screenshot (261)](https://github.com/Riswan-Nopiyar/tugas-masuk-web-dev/assets/103617674/f27d456b-5fcd-495d-a088-700ff7bace98)
+![Screenshot (262)](https://github.com/Riswan-Nopiyar/tugas-masuk-web-dev/assets/103617674/9fe1531d-c04e-4e7a-ad03-770dbdb85232)
+![Screenshot (263)](https://github.com/Riswan-Nopiyar/tugas-masuk-web-dev/assets/103617674/397dd6f6-11ef-4ba7-a55c-ee44f5586154)
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
