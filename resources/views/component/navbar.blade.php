@@ -1,4 +1,4 @@
-    <div class="collapse bg-dark" id="navbarHeader">
+    <div class="collapse bg-primary" id="navbarHeader">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="navbar navbar-primary bg-primary shadow-sm">
       <div class="container">
         <a href="#" class="navbar-brand d-flex align-items-center">
         <svg width="30px" height="30px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">

@@ -40,21 +40,34 @@ class KursusController extends Controller
         Kursus::create($input);
 
         return redirect()->route('kursus.create')
-            ->with('success', 'Kursus berhasil ditambahkan.');
+            ->with('success', 'Data Kursus berhasil ditambahkan.');
     }
 
-    public function show(Kursus $kursus)
+    public function show($id)
     {
+        $kursus = Kursus::find($id);
+
+        if (!$kursus) {
+            return redirect()->route('kursus.index')->with('error', 'Kursus tidak ditemukan.');
+        }
         return view('kursus.show', compact('kursus'));
     }
 
-    public function edit(Kursus $kursus)
+    public function edit($id)
     {
+        $kursus = Kursus::find($id);
+
+        if (!$kursus) {
+            return redirect()->route('kursus.index')->with('error', 'Kursus tidak ditemukan.');
+        }
         return view('kursus.edit', compact('kursus'));
     }
 
-    public function update(Request $request, Kursus $kursus)
+
+    public function update(Request $request, $id)
     {
+        $kursus = Kursus::findOrFail($id);
+
         $request->validate([
             'judul' => 'required',
             'deskripsi' => 'required',
@@ -77,14 +90,15 @@ class KursusController extends Controller
         $kursus->update($input);
 
         return redirect()->route('kursus.index')
-            ->with('success', 'Kursus berhasil diperbarui.');
+            ->with('success', 'Data Kursus berhasil diperbarui.');
     }
 
-    public function destroy(Kursus $kursus)
+    public function destroy($id)
     {
+        $kursus = Kursus::findOrFail($id);
         $kursus->delete();
 
         return redirect()->route('kursus.index')
-            ->with('success', 'Kursus berhasil dihapus.');
+            ->with('success', 'Data Kursus berhasil dihapus.');
     }
 }

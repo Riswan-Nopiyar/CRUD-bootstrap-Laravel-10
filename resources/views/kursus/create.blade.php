@@ -7,6 +7,7 @@
             <h2 class="card-title text-center mb-4">Buat kursus</h2>
             <form action="{{ route('kursus.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('POST')
                 <div class="mb-3">
                     <label for="judul" class="form-label">Judul</label>
                     <input type="text" class="form-control" id="judul" name="judul" required>
@@ -37,14 +38,18 @@
                     <label for="foto_kursus" class="form-label">Foto Kursus</label>
                     <input type="file" class="form-control" id="foto_kursus" name="foto_kursus" required>
                 </div>
-                
+                @if(session('success'))
+                <div class="mx-3 alert alert-success">
+                    {{ session('success') }}
+                </div>
+                @endif
                 <div class="text-center mb-2">
-                <a href="{{ url('/beranda')}}"class="btn btn-secondary me-5">  &#8592;</a>
+                    <a href="{{ url('/beranda')}}" class="btn btn-secondary me-5"> &#8592;</a>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
+
             </form>
         </div>
     </div>
 </div>
 @endsection
-
